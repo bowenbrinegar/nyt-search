@@ -1,0 +1,75 @@
+#listItem {
+    position: relative;
+    background: aquamarine;
+    width: 100%;
+    height: 175px;
+    margin: 10px 0;
+}
+
+#listItem > h1 {
+    position: absolute;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    left: 73%;
+    top: 0;
+    font-size: 18px;
+    width: 55%;
+}
+
+#listItem > p {
+    position: absolute;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    left: 71%;
+    top: 30%;
+    width: 50%;
+    font-size: 12px;
+}
+
+#listItem > a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-decoration: none;
+    background: papayawhip;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+#listItem > a:hover {
+    color: red;
+}
+
+#thumbnail {
+    position: absolute;
+    -webkit-transform: translate(0,-50%);
+    -moz-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    top: 50%;
+    left: 10px;
+    height: 155px;
+    width: 245px;
+}
+
+.thumbnail {
+    position: absolute;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,31 @@
+body {
+    margin: 0
+}
+
+#navContainer {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+    background: rgba(0,0,0,.2)
+}
+
+.pill {
+    float: left;
+    background: rgba(0,0,0,.2);
+    height: 50px;
+    width: 120px;
+    text-align: center;
+    line-height: 45px;
+}
+
+#navContainer > div:nth-child(4) {
+    float:right;
+}
+
+.pill:hover {
+    background: rgba(0,0,0,.4);
+    color: white;
+}
+
