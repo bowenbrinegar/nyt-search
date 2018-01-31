@@ -22,7 +22,8 @@
     "mongoose": "^4.11.7",
     "react-router-dom": "^4.1.2",
     "jquery": "^3.3.1",
-    "request": "^2.83.0"
+    "request": "^2.83.0",
+    "moment": "^2.20.1"
   },
   "author": "Bowen Brinegar",
   "license": "ISC"

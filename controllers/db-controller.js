@@ -1,37 +1,29 @@
 const db = require("../models");
 
-// Defining methods for the booksController
 module.exports = {
   findAll: function(req, res) {
-    db.Sample
+    db.Article
       .find(req.query)
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
-  .catch(err => res.status(422).json(err));
-  },
-  findById: function(req, res) {
-    db.Sample
-      .findById(req.params.id)
-      .then(dbModel => res.json(dbModel))
-  .catch(err => res.status(422).json(err));
+      .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
-    db.Sample
-      .create(req.body)
-      .then(dbModel => res.json(dbModel))
-  .catch(err => res.status(422).json(err));
+    console.log(req.body)
+    db.Article.findOne({title: req.body.title})
+      .then(result => {
+        !result ?
+          db.Article
+            .create(req.body)
+            .then(dbModel => console.log(dbModel))
+            .catch(err => res.status(422).json(err)) :
+          res.send("already exists")
+      }).catch(err => console.log(err))
   },
-  update: function(req, res) {
-    db.Sample
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
-      .then(dbModel => res.json(dbModel))
-  .catch(err => res.status(422).json(err));
-  },
-  remove: function(req, res) {
-    db.Sample
-      .findById({ _id: req.params.id })
-      .then(dbModel => dbModel.remove())
-  .then(dbModel => res.json(dbModel))
-  .catch(err => res.status(422).json(err));
+  clear: function(req, res) {
+    console.log(req.body.title)
+    db.Article.remove({title: req.params.title})
+      .then(result => res.send(result))
+      .catch(err => console.log(err))
   }
 };

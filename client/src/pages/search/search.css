@@ -7,22 +7,42 @@
     transition: .5s;
 }
 
-.searchContainer.fadeIn {
+.searchContainer.fadeInLarge {
     visibility: visible;
-    height: 100px;
+    height: 200px;
     transition: .5s;
 }
 
 .searchFloat {
     position: absolute;
     width: 90%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
     left: 50%;
-    top: 50%;
+    top: 10%;
+}
+
+#tools {
+    position: absolute;
+    width: 90%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    left: 50%;
+    bottom: 5%;
+}
+
+#toolComponents {
+    float: left;
+    height: 100px;
+    width: 150px;
+    margin: 0 20px;
+    background: green;
 }
 
 

@@ -1,5 +1,5 @@
-import Author from './author';
-import Sort from './sort';
-import Year from './year'
+import Author from './filter';
+import Sort from './date';
+import Year from './sort'
 
 export { Author, Sort, Year}

@@ -12,7 +12,7 @@ app.use(routes);
 
 mongoose.Promise = global.Promise;
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist",
+  process.env.MONGODB_URI || "mongodb://localhost/searchDB",
   {
     useMongoClient: true
   }
@@ -22,3 +22,9 @@ app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
 
+
+process.on('SIGTERM', function() {
+  console.log( "\nGracefully shutting down from SIGINT (Ctrl-C)" );
+  // some other closing procedures go here
+  process.exit(1);
+});
